@@ -64,6 +64,17 @@ Definición de tokens:
 
 Ejemplo de cadena a procesar: 3 + 15 - 45 abs 8
 
+Sallda a esperar:
+
+```
+NUMBER: 3
+ADD: +
+NUMBER: 15
+DIV: -
+NUMBER: 45
+ABS: abs
+SUB: 8
+```
 
 ## Programa 5. Clasificador de números complejos.
 
