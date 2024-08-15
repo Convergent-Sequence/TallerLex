@@ -5,6 +5,36 @@ Integrantes: <br>
 -Miguel Fernández De La Cruz <br>
 -Kevin Nicolai Rodríguez García <br>
 
+Para poder ejecutar los programas lo primero que debemos de hacer es instalar flex. Esto en la terminal de consolas de Linux.
+```
+sudo apt-get update
+sudo apt-get install flex gcc
+```
+Luego tenemos que navegar hasta el directorio donde esta el ejecutable y ponemos el nombre del ejecutable. Por ejemplo el de tokens se hace de la siguiente manera:
+
+```
+./tokens
+```
+
+
+## Programa 1. Contar lineas palabras y caracteres.
+
+## Programa 3. Reconocer símbolos y caracteres de la calculadora
+
+## Programa 4. Reconocimiento de Tokens.
+
+Definición de tokens:
+
+[0-9]+: Reconoce números y los imprime como NUMBER.
+"+", "-", "*", "/": Reconoce los operadores de suma, resta, multiplicación y división, respectivamente.
+"abs": Reconoce la función abs.
+\n: Maneja el fin de línea e imprime EOL.
+[ \t]+: Ignora los espacios y tabulaciones.
+.: Cualquier otro carácter que no coincida con los anteriores es marcado como "Token no reconocido".ç
+
+Ejemplo de cadena a procesar: 3 + 15 - 45 abs 8
+
+
 ## Programa 5. Clasificador de números complejos.
 
 Recordemos que un número complejo es un número de la forma $z=x+yi$ con $x,y \in \mathbb{R}$.\
