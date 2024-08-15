@@ -19,28 +19,49 @@ Luego tenemos que navegar hasta el directorio donde esta el ejecutable y ponemos
 
 ## Programa 1. Contar lineas palabras y caracteres.
 
+\n: Cuando se encuentra un carácter de nueva línea (fin de línea): <br>
+
+Incrementa num_lineas. <br> 
+
+[ \t]+: Cuando se encuentra uno o más espacios o tabulaciones consecutivas: <br> 
+
+Se incrementa num_caracteres en el valor de yyleng, que es la longitud de la coincidencia. <br>
+
+[^a-zA-Z0-9 \n\t]+: Cuando se encuentra un carácter o secuencia de caracteres que no sean letras, números, espacios, tabulaciones o nuevas líneas (como puntuación o símbolos especiales): <br>
+
+Incrementa num_caracteres en el valor de yyleng. <br> 
+
+[a-zA-Z0-9]+: Cuando se encuentra una secuencia de una o más letras o números: <br>
+
+Incrementa num_palabras. <br> 
+Incrementa num_caracteres en el valor de yyleng. <br>
+
+.: Para cualquier otro carácter (esto abarca cualquier cosa que no coincida con las reglas anteriores, como símbolos individuales o caracteres no alfanuméricos): <br>
+
+Incrementa num_caracteres.
+
 ## Programa 3. Reconocer símbolos y caracteres de la calculadora
 
 ## Programa 4. Reconocimiento de Tokens.
 
 Definición de tokens:
 
-[0-9]+: Reconoce números y los imprime como NUMBER.
-"+", "-", "*", "/": Reconoce los operadores de suma, resta, multiplicación y división, respectivamente.
-"abs": Reconoce la función abs.
-\n: Maneja el fin de línea e imprime EOL.
-[ \t]+: Ignora los espacios y tabulaciones.
-.: Cualquier otro carácter que no coincida con los anteriores es marcado como "Token no reconocido".ç
+[0-9]+: Reconoce números y los imprime como NUMBER. <br>
+"+", "-", "*", "/": Reconoce los operadores de suma, resta, multiplicación y división, respectivamente. <br>
+"abs": Reconoce la función abs. <br> 
+\n: Maneja el fin de línea e imprime EOL. <br>
+[ \t]+: Ignora los espacios y tabulaciones. <br> 
+.: Cualquier otro carácter que no coincida con los anteriores es marcado como "Token no reconocido". <br>
 
 Ejemplo de cadena a procesar: 3 + 15 - 45 abs 8
 
 
 ## Programa 5. Clasificador de números complejos.
 
-Recordemos que un número complejo es un número de la forma $z=x+yi$ con $x,y \in \mathbb{R}$.\
-La forma $z=x+yi$ se conoce como forma rectangular, además, $z$ se puede expresar en forma polar como $z = re^{i\theta}=r(\cos \theta + i\sin \theta)$ con $r=\sqrt{x ^2+y^2}$.\
-Para simplificar la lectura del archivo, trabajaremos únicamente con grados. Note que si $z \in \mathbb{R}$ entonces $\theta = 360$, si $z \in \mathbb{C}\setminus\mathbb{R}$ entonces $\theta = 90$ y si $z \in \mathbb{C}$ entonces $\theta\not\in\lbrace 360,90\rbrace$.\
-Según lo anterior si un numero está expresado en la forma polar $r(\cos \theta + i\sin \theta)$ inmediatamente será clasificado como complejo, y si está expresado en la forma $re^{i\theta}$ será clasificado según el valor de $\theta$.
+Recordemos que un número complejo es un número de la forma $z=x+yi$ con $x,y \in \mathbb{R}$.\ <br>
+La forma $z=x+yi$ se conoce como forma rectangular, además, $z$ se puede expresar en forma polar como $z = re^{i\theta}=r(\cos \theta + i\sin \theta)$ con $r=\sqrt{x ^2+y^2}$.\ <br>
+Para simplificar la lectura del archivo, trabajaremos únicamente con grados. Note que si $z \in \mathbb{R}$ entonces $\theta = 360$, si $z \in \mathbb{C}\setminus\mathbb{R}$ entonces $\theta = 90$ y si $z \in \mathbb{C}$ entonces $\theta\not\in\lbrace 360,90\rbrace$.\ <br>
+Según lo anterior si un numero está expresado en la forma polar $r(\cos \theta + i\sin \theta)$ inmediatamente será clasificado como complejo, y si está expresado en la forma $re^{i\theta}$ será clasificado según el valor de $\theta$. <br>
 
 El programa lee un txt con números dispuestos de forma vertical, y clasifica cada uno de ellos. Digamos, el txt 
 
