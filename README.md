@@ -4,6 +4,7 @@ Integrantes: <br>
 -Camilo Andres López Contreras <br>
 -Miguel Fernández De La Cruz <br>
 -Kevin Nicolai Rodríguez García <br>
+-Juan José Márquez Villareal <br>
 
 Para poder ejecutar los programas lo primero que debemos de hacer es instalar flex. Esto en la terminal de consolas de Linux.
 ```
