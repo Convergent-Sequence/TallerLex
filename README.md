@@ -42,6 +42,15 @@ Incrementa num_caracteres.
 
 ## Programa 3. Reconocer símbolos y caracteres de la calculadora
 
+Estas son definiciones de patrones que se utilizan en las reglas de flex: <br>
+
+DIGIT: Define un dígito como cualquier número entre 0 y 9. <br>
+NUMBER: Define un número como una secuencia de dígitos, opcionalmente seguida de un punto decimal y más dígitos (es decir, soporta tanto enteros como números decimales). <br>
+OPERATOR: Define un operador matemático como +, -, *, /, ^. <br>
+PAREN: Define paréntesis ( y ). <br>
+WHITESPACE: Define espacios en blanco, tabulaciones y saltos de línea. <br>
+FUNCTION: Define funciones matemáticas comunes como sin, cos, tan, log, ln, sqr. <br>
+
 ## Programa 4. Reconocimiento de Tokens.
 
 Definición de tokens:
