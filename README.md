@@ -18,7 +18,7 @@ Luego tenemos que navegar hasta el directorio donde esta el ejecutable y ponemos
 ```
 
 
-## Programa 1. Contar lineas palabras y caracteres.
+## Programa 1. Contador de líneas, palabras y caracteres.
 
 \n: Cuando se encuentra un carácter de nueva línea (fin de línea): <br>
 
@@ -41,7 +41,7 @@ Incrementa num_caracteres en el valor de yyleng. <br>
 
 Incrementa num_caracteres.
 
-## Programa 3. Reconocer símbolos y caracteres de la calculadora
+## Programa 3. Reconocer símbolos y caracteres de la calculadora.
 
 Estas son definiciones de patrones que se utilizan en las reglas de flex: <br>
 
@@ -50,7 +50,36 @@ NUMBER: Define un número como una secuencia de dígitos, opcionalmente seguida 
 OPERATOR: Define un operador matemático como +, -, *, /, ^. <br>
 PAREN: Define paréntesis ( y ). <br>
 WHITESPACE: Define espacios en blanco, tabulaciones y saltos de línea. <br>
-FUNCTION: Define funciones matemáticas comunes como sin, cos, tan, log, ln, sqr. <br>
+FUNCTION: Define funciones matemáticas comunes como sin, cos, tan, log, ln, sqrt. <br>
+
+El programa toma una "entrada de calculadora" y devuelve los símbolos, números, caracteres y funciones utilizadas.\
+Por ejemplo, la entrada `3.14 + 2 * (sin(0) - log(10)) / sqrt(4) ^ 2`, produce
+
+```
+Número: 3.14
+Operador: + (suma)
+Número: 2
+Operador: * (multiplicación)
+Paréntesis: (
+Función: sin (seno)
+Paréntesis: (
+Número: 0
+Paréntesis: )
+Operador: - (resta)
+Función: log (logaritmo base 10)
+Paréntesis: (
+Número: 10
+Paréntesis: )
+Paréntesis: )
+Operador: / (división)
+Función: sqrt (raíz cuadrada)
+Paréntesis: (
+Número: 4
+Paréntesis: )
+Operador: ^ (potenciación)
+Número: 2
+```
+
 
 ## Programa 4. Reconocimiento de Tokens.
 
