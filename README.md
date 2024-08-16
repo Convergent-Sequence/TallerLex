@@ -41,6 +41,66 @@ Incrementa num_caracteres en el valor de yyleng. <br>
 
 Incrementa num_caracteres.
 
+## Programa 2. Diccionario
+# Traductor Simple de Inglés a Español
+
+Este programa es un traductor sencillo de palabras en inglés a español usando Flex (Lex). El programa reconoce palabras específicas en inglés y las traduce al español, manejando tanto formas singulares como plurales.
+
+## Características
+
+- Traducción de artículos definidos en inglés ("the") a sus equivalentes en español ("el", "la", "los", "las").
+- Traducción de sustantivos comunes como "cat", "dog", "house", etc., tanto en singular como en plural.
+- Soporte para conjunciones simples como "and".
+
+## Palabras Soportadas
+
+El programa actualmente soporta las siguientes palabras y sus formas plurales:
+    
+- the cat / the cats
+- the dog / the dogs
+- the house / the houses
+- the book / the books
+- the apple / the apples
+- the car / the cars
+- the tree / the trees
+- the flower / the flowers
+- the city / the cities
+- the person / the people
+
+## Requisitos
+
+- Flex (Lex)
+- Compilador GCC
+
+## Instrucciones de Compilación y Ejecución
+
+1. **Instalar Flex y GCC:**
+
+   Asegúrate de tener Flex y GCC instalados en tu sistema. Puedes instalarlos en sistemas basados en Debian/Ubuntu con:
+
+   ```bash
+   sudo apt-get update
+   sudo apt-get install flex gccompilar el Código:
+
+2. Compila el archivo traductor.l con los siguientes comandos:
+
+bash
+
+flex traductor.l
+gcc lex.yy.c -o traductor -ll
+
+3. Ejecutar el Traductor:
+
+Usa el programa ejecutable generado para traducir frases de inglés a español. Ejemplo:
+
+bash
+
+echo "the house and the city" | ./traductor
+
+Esto debería producir la salida:
+
+el/la/los/las casa y el/la/los/las  ciudad
+
 ## Programa 3. Reconocer símbolos y caracteres de la calculadora.
 
 Estas son definiciones de patrones que se utilizan en las reglas de flex: <br>
